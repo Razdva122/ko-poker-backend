@@ -14,7 +14,7 @@ const server = https.createServer({
 }, app);
 
 const backendPort = 3000;
-const frontendURL = process.env.NODE_ENV === 'production' ? 'razdva122.github.io' : 'http://localhost:8080';
+const frontendURL = process.env.NODE_ENV === 'production' ? 'https://razdva122.github.io' : 'http://localhost:8080';
 
 const corsOpts = {
   cors: {
