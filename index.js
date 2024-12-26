@@ -1,5 +1,5 @@
 const express = require('express');
-const http = require('http');
+const https = require('https');
 const socketIo = require('socket.io');
 const cors = require('cors');
 
@@ -7,7 +7,10 @@ const Manager = require('./manager');
 
 
 const app = express();
-const server = http.createServer(app);
+const server = https.createServer({
+	key: fs.readFileSync('/etc/ssl/privkey.pem'),
+	cert: fs.readFileSync('/etc/ssl/fullchain.pem')
+}, app);
 
 const backendPort = 3000;
 const frontendURL = process.env.NODE_ENV === 'production' ? 'razdva122.github.io' : 'http://localhost:8080';
