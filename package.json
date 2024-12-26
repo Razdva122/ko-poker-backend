@@ -1,13 +1,13 @@
 {
   "name": "pko-backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-		"dev": "node index.js",
-		"start": "NODE_ENV=production node index.js",
-		"version": "docker version && npm version $npm_package_version --no-git-tag-version && git add . && npm run image:build",
-		"image:build": "docker build --tag razdva12/pko-backend:V$npm_package_version --file backend.Dockerfile . && docker push razdva12/pko-backend:V$npm_package_version",
+    "dev": "node index.js",
+    "start": "NODE_ENV=production node index.js",
+    "version": "docker version && npm version $npm_package_version --no-git-tag-version && git add . && npm run image:build",
+    "image:build": "docker build --tag razdva12/pko-backend:V$npm_package_version --file backend.Dockerfile . && docker push razdva12/pko-backend:V$npm_package_version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
